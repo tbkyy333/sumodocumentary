@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #000000;
+  --color-surface: #0a0a0a;
+  --color-gold: #c9a96e;
+  --color-gold-light: #e2c89a;
+  --color-gray-dim: #6b7280;
+
+  --font-serif-jp: var(--font-noto-serif-jp);
+  --font-display: var(--font-cormorant);
+
+  --spacing-section: 6rem;
+}
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-serif-jp), serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9a96e;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e2c89a;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(201, 169, 110, 0.3);
+  color: #ffffff;
+}
+
+/* Gold divider utility */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+}
+
+/* Cinematic text utilities */
+.label-cinematic {
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-family: var(--font-cormorant), serif;
+  color: #c9a96e;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
