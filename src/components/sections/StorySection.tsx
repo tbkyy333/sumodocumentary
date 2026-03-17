@@ -62,24 +62,31 @@ export default function StorySection() {
             variants={slideFromLeft}
           >
             <p className="label-cinematic mb-6">Film Synopsis</p>
-            <h3
-              className="text-2xl md:text-3xl text-white font-bold mb-6 leading-relaxed"
-              style={{ fontFamily: 'var(--font-noto-serif-jp), serif' }}
-            >
-              「心・技・体」<br />三位一体の追求
-            </h3>
-            <div className="space-y-4 text-gray-400 leading-loose text-sm">
+            <div className="space-y-4 text-gray-300 leading-loose text-sm" style={{ fontFamily: 'var(--font-noto-serif-jp), serif' }}>
               <p>
-                高砂部屋は明治十八年（1885年）の創立以来、百四十年にわたり日本の相撲文化を支えてきました。
-                初代高砂浦五郎が確立した伝統は、時代を超えて脈々と受け継がれています。
+                大相撲の名門・高砂部屋。
+                大相撲の力士が減少する中<br />
+                帰化した モンゴル出身・高砂親方の『新弟子スカウト活動』に密着！<br/><br/>
+                相撲部屋とは 『人生を預かる場所』<br />
+                新弟子候補は 人生の分岐点で葛藤…<br />
+                実は、幼いころから抱えてきた病気とも戦っていた。 １８歳の決断は？<br/>
+                
+                親方と共に向き合うのは 不祥事と大ケガから再起の途中にいる元大関。<br />
+                若者の決断と、力士として生きる人生。<br />
+                その二つの道が、静かに交差し<br />
+                「背負った責任の数」が 人の強さ となっていく…<br/>
+                相撲部屋という家族を通して<br />
+                『人生の決断において必要なこと』<br />
+                『自分の人生を引き受け 責任を背負う姿』 を描く物語。
               </p>
               <p>
-                私たちが追求するのは、単なる勝利ではありません。土俵の上での礼儀、稽古場での厳しさ、
-                日常生活における謙虚さ。すべてが一体となって、真の力士を作り上げます。
+                若者が人生を選ぶとき…<br />
+                親がその背中を見送るとき…<br />
+                誰かの決断を受け止めるとき…
               </p>
               <p>
-                現代においても、その精神は変わらぬまま。次世代の力士たちは古き良き伝統を誇りとして胸に刻み、
-                新しい高砂部屋の歴史を紡いでいます。
+                きっとこの「高砂部屋ドキュメンタリー」は<br />
+                多くの人の心に重なる。
               </p>
             </div>
           </motion.div>
