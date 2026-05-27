@@ -72,7 +72,7 @@ export default function TrailerModal({ isOpen, onClose, youtubeId }: TrailerModa
                 {videoSrc ? (
                   <iframe
                     src={videoSrc}
-                    title="高砂部屋 紹介映像"
+                    title="土俵際 紹介映像"
                     className="absolute inset-0 w-full h-full"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen

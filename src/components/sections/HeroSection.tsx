@@ -27,7 +27,7 @@ export default function HeroSection() {
           {/* Hero image */}
           <Image
             src="/images/top.jpeg"
-            alt="高砂部屋 ドキュメンタリー"
+            alt="土俵際 ドキュメンタリー"
             fill
             priority
             className="object-cover object-center"
@@ -89,7 +89,7 @@ export default function HeroSection() {
             className="text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-none tracking-wider mb-4"
             style={{ fontFamily: 'var(--font-noto-serif-jp), serif' }}
           >
-            高砂部屋
+            土俵際
           </motion.h1>
 
           <motion.p
@@ -118,7 +118,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.3 }}
-            className="flex flex-col sm:flex-row items-center gap-4"
+            className="flex items-center justify-center"
           >
             <button
               onClick={() => setModalOpen(true)}
@@ -127,13 +127,6 @@ export default function HeroSection() {
             >
               <Play size={14} className="group-hover:scale-110 transition-transform duration-200" />
               紹介映像を観る
-            </button>
-            <button
-              onClick={() => document.querySelector('#members')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-gray-400 hover:text-white transition-colors duration-300 text-xs tracking-[0.2em] uppercase"
-              style={{ fontFamily: 'var(--font-cormorant), serif', fontSize: '0.85rem' }}
-            >
-              力士一覧を見る →
             </button>
           </motion.div>
         </motion.div>

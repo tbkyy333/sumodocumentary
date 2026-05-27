@@ -13,7 +13,7 @@ export default function FooterSection() {
               className="text-white font-bold text-xl mb-1 tracking-widest"
               style={{ fontFamily: 'var(--font-noto-serif-jp), serif' }}
             >
-              高砂部屋
+              土俵際
             </p>
             <p
               className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4"
@@ -32,7 +32,7 @@ export default function FooterSection() {
           <div>
             <p className="label-cinematic mb-4">Navigation</p>
             <ul className="space-y-3">
-              {['NEWS', 'STORY', 'HISTORY', 'MEMBERS', 'STAFF'].map((label) => (
+              {['NEWS', 'STORY', 'CREDITS'].map((label) => (
                 <li key={label}>
                   <button
                     onClick={() => document.querySelector(`#${label.toLowerCase()}`)?.scrollIntoView({ behavior: 'smooth' })}
@@ -68,7 +68,7 @@ export default function FooterSection() {
         <div className="gold-divider mb-6" />
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-600 text-xs tracking-wide">
-            © {currentYear} 高砂部屋 Takasago Stable. All Rights Reserved.
+            © {currentYear} 土俵際. All Rights Reserved.
           </p>
           <p
             className="text-gray-700 text-[0.6rem] tracking-[0.2em] uppercase"

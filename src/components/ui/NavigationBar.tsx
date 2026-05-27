@@ -47,7 +47,7 @@ export default function NavigationBar() {
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
             <span className="text-white font-bold text-lg tracking-widest" style={{ fontFamily: 'var(--font-noto-serif-jp), serif' }}>
-              高砂部屋
+              土俵際
             </span>
             <span className="text-[#c9a96e] text-[0.6rem] tracking-[0.3em] uppercase" style={{ fontFamily: 'var(--font-cormorant), serif' }}>
               Documentary Film · 2026
