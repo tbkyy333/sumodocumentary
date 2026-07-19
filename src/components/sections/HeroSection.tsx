@@ -20,19 +20,32 @@ export default function HeroSection() {
         style={{ minHeight: '100dvh' }}
       >
         {/* Parallax background */}
-        <motion.div
-          className="absolute inset-0"
-          style={{ y: bgY }}
-        >
-          {/* Hero image */}
-          <Image
-            src="/images/top.jpeg"
-            alt="土俵際 ドキュメンタリー"
-            fill
-            priority
-            className="object-cover object-center"
-            sizes="100vw"
-          />
+        <div className="absolute inset-0 overflow-hidden bg-black">
+          <motion.div
+            className="absolute inset-x-0 top-1/2 -translate-y-1/2"
+            style={{ y: bgY }}
+          >
+            <div
+              className="relative overflow-hidden"
+              style={{
+                WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)',
+                maskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)',
+              }}
+            >
+              {/* Hero image — full width, no horizontal crop */}
+              <Image
+                src="/images/top.png"
+                alt="土俵際 ドキュメンタリー"
+                width={0}
+                height={0}
+                sizes="100vw"
+                priority
+                className="w-full h-auto block"
+              />
+              {/* 全体に30%の黒オーバーレイ */}
+              <div className="absolute inset-0 bg-black/50 pointer-events-none" />
+            </div>
+          </motion.div>
 
           {/* ① 極細ドット格子オーバーレイ — 文字可読性確保 */}
           <div
@@ -43,8 +56,6 @@ export default function HeroSection() {
             }}
           />
 
-          {/* ② シネマティック グラデーションオーバーレイ */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
 
           {/* Decorative vertical lines */}
@@ -56,7 +67,7 @@ export default function HeroSection() {
             className="absolute right-1/4 top-0 bottom-0 w-px opacity-10"
             style={{ background: 'linear-gradient(180deg, transparent, #c9a96e, transparent)' }}
           />
-        </motion.div>
+        </div>
 
         {/* Content */}
         <motion.div

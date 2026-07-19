@@ -20,7 +20,7 @@ function MagazineImage({ src, delay = 0, isInView }: { src: string; delay?: numb
           width={0}
           height={0}
           sizes="300px"
-          className="w-full h-auto grayscale opacity-80"
+          className="w-full h-auto opacity-80"
         />
         {/* Edge fade */}
         <div className="absolute inset-0 pointer-events-none" style={{
@@ -104,12 +104,12 @@ export default function StorySection() {
                 人生を預かる者として、責任を負おうとする…
               </p>
             </motion.div>
-            <MagazineImage src="/images/story1.png" delay={0.2} isInView={isInView2} />
+            <MagazineImage src="/images/story1.png?v=2" delay={0.2} isInView={isInView2} />
           </div>
 
           {/* Row 2 — image left, text right */}
           <div className="grid md:grid-cols-[280px_1fr] gap-x-14 gap-y-8 items-center">
-            <MagazineImage src="/images/story2.png" delay={0.1} isInView={isInView2} />
+            <MagazineImage src="/images/story2.png?v=2" delay={0.1} isInView={isInView2} />
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -146,7 +146,7 @@ export default function StorySection() {
                 &ldquo;責任を背負って生きる強さ&rdquo;を描いた物語。
               </p>
             </motion.div>
-            <MagazineImage src="/images/story3.png" delay={0.2} isInView={isInView2} />
+            <MagazineImage src="/images/story3.png?v=2" delay={0.2} isInView={isInView2} />
           </div>
 
         </div>

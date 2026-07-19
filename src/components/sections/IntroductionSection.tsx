@@ -23,11 +23,11 @@ export default function IntroductionSection() {
         initial={{ opacity: 0, x: -40 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
         transition={{ duration: 1.2, delay: 0.2 }}
-        className="absolute left-0 top-1/2 -translate-y-1/2 w-[30vw] max-w-[380px] h-[85%] hidden lg:block"
+        className="absolute left-0 top-1/2 -translate-y-1/2 w-[30vw] max-w-[380px] h-[60%] hidden lg:block"
       >
         <div className="relative w-full h-full">
           <Image
-            src="/images/intro1.png?v=3"
+            src="/images/intro1.png?v=4"
             alt=""
             fill
             className="object-cover object-center opacity-85"
@@ -44,11 +44,11 @@ export default function IntroductionSection() {
         initial={{ opacity: 0, x: 40 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }}
         transition={{ duration: 1.2, delay: 0.2 }}
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-[30vw] max-w-[380px] h-[85%] hidden lg:block"
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-[30vw] max-w-[380px] h-[60%] hidden lg:block"
       >
         <div className="relative w-full h-full">
           <Image
-            src="/images/intro2.png?v=3"
+            src="/images/intro2.png?v=5"
             alt=""
             fill
             className="object-cover object-center opacity-85"
