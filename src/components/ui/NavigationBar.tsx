@@ -40,19 +40,8 @@ export default function NavigationBar() {
         }}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          {/* Logo */}
-          <a
-            href="#"
-            className="flex flex-col leading-none"
-            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-          >
-            <span className="text-white font-bold text-lg tracking-widest" style={{ fontFamily: 'var(--font-noto-serif-jp), serif' }}>
-              土俵際
-            </span>
-            <span className="text-[#c9a96e] text-[0.6rem] tracking-[0.3em] uppercase" style={{ fontFamily: 'var(--font-cormorant), serif' }}>
-              Documentary Film · 2026
-            </span>
-          </a>
+          {/* Logo removed */}
+          <div />
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">

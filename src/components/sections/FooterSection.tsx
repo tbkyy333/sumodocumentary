@@ -48,13 +48,8 @@ export default function FooterSection() {
 
           {/* Info */}
           <div>
-            <p className="label-cinematic mb-4">Stable Info</p>
+            <p className="label-cinematic mb-4">Support</p>
             <div className="space-y-3 text-xs text-gray-500">
-              <div>
-                <p className="text-gray-400 mb-0.5">稽古見学</p>
-                <p>毎月第一日曜 05:30〜</p>
-                <p>事前予約不要・見学無料</p>
-              </div>
               <div>
                 <p className="text-gray-400 mb-0.5">後援会</p>
                 <p>高砂部屋後援会事務局</p>

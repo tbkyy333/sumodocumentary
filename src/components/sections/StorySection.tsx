@@ -114,7 +114,7 @@ export default function StorySection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.9, delay: 0.15 }}
-              className="space-y-5 text-right"
+              className="space-y-5 text-left"
               style={{ fontFamily: 'var(--font-noto-serif-jp), serif' }}
             >
               <p className="text-gray-300 text-sm leading-[2.4]">

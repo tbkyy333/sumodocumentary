@@ -21,6 +21,24 @@ export default function HeroSection() {
       >
         {/* Parallax background */}
         <div className="absolute inset-0 overflow-hidden bg-black">
+          {/* Abstract blurred cover — 上下の空白を埋める抽象背景 */}
+          <div className="absolute inset-0 pointer-events-none">
+            <Image
+              src="/images/bokashi.png"
+              alt=""
+              aria-hidden
+              fill
+              sizes="100vw"
+              priority
+              className="object-cover"
+              style={{
+                filter: 'blur(12px) saturate(1.2)',
+                transform: 'scale(1.1)',
+                opacity: 0.3,
+              }}
+            />
+          </div>
+
           <motion.div
             className="absolute inset-x-0 top-1/2 -translate-y-1/2"
             style={{ y: bgY }}
@@ -47,26 +65,10 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* ① 極細ドット格子オーバーレイ — 文字可読性確保 */}
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `radial-gradient(circle, rgba(0,0,0,0.55) 1px, transparent 1px)`,
-              backgroundSize: '4px 4px',
-            }}
-          />
+          {/* ① 黒の薄い膜 — 文字可読性確保 */}
+          <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
-
-          {/* Decorative vertical lines */}
-          <div
-            className="absolute left-1/4 top-0 bottom-0 w-px opacity-10"
-            style={{ background: 'linear-gradient(180deg, transparent, #c9a96e, transparent)' }}
-          />
-          <div
-            className="absolute right-1/4 top-0 bottom-0 w-px opacity-10"
-            style={{ background: 'linear-gradient(180deg, transparent, #c9a96e, transparent)' }}
-          />
         </div>
 
         {/* Content */}
@@ -74,24 +76,6 @@ export default function HeroSection() {
           className="relative z-10 flex flex-col items-center justify-center text-center px-6"
           style={{ minHeight: '100dvh', opacity }}
         >
-          {/* Label */}
-          <motion.p
-            initial={{ opacity: 0, letterSpacing: '0.5em' }}
-            animate={{ opacity: 1, letterSpacing: '0.3em' }}
-            transition={{ duration: 1.2, delay: 0.3 }}
-            className="label-cinematic mb-8"
-          >
-            Documentary Film · 2026
-          </motion.p>
-
-          {/* Gold divider */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1.0, delay: 0.5 }}
-            className="gold-divider w-24 mb-8"
-          />
-
           {/* Main title */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
