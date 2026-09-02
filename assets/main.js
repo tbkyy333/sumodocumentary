@@ -75,7 +75,7 @@
     if (!reduceMotion) {
       if (heroParallax) {
         var off = Math.min(y * 0.15, 140);
-        heroParallax.style.transform = 'translateY(calc(-50% + ' + off + 'px))';
+        heroParallax.style.transform = 'translateY(' + off + 'px)';
       }
       if (heroContent) {
         heroContent.style.opacity = String(Math.max(0, 1 - y / 400));
