@@ -103,8 +103,8 @@
   var scrollIndicator = document.getElementById('scroll-indicator');
   if (scrollIndicator) {
     scrollIndicator.addEventListener('click', function () {
-      var news = document.querySelector('#news');
-      if (news) news.scrollIntoView({ behavior: 'smooth' });
+      var next = document.querySelector('#introduction');
+      if (next) next.scrollIntoView({ behavior: 'smooth' });
     });
   }
 
