@@ -69,7 +69,7 @@ body {
 .label-cinematic {
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 20px;
   font-family: var(--font-cormorant), serif;
   color: #c9a96e;
 }
@@ -98,5 +98,34 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Hero top image: switch by hero section aspect ratio */
+#hero {
+  height: 100dvh;
+  container-type: size;
+  container-name: hero;
+}
+.hero-top-h,
+.hero-top-v {
+  display: none;
+  margin: 0 auto;
+}
+@container hero (aspect-ratio >= 1) {
+  .hero-top-h {
+    display: block;
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+  }
+}
+@container hero (aspect-ratio < 1) {
+  .hero-top-v {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
   }
 }
