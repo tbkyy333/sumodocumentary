@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>土俵際 × MUGEN | 放映記念キャンペーン</title>
+<meta name="description" content="ドキュメンタリー『土俵際』放映記念。MUGENによる特別キャンペーン、無料画像配布、アーティストコラボ相撲アート、全国放映会巡業のご案内。2026年11月1日よりNetflix・U-NEXTで独占配信。" />
+<meta name="keywords" content="土俵際,MUGEN,キャンペーン,相撲アート,コラボ,高砂部屋,ドキュメンタリー,Netflix,U-NEXT" />
+<meta property="og:title" content="土俵際 × MUGEN | 放映記念キャンペーン" />
+<meta property="og:description" content="その一瞬に、すべてがかかる。——『土俵際』放映記念、MUGEN特別キャンペーン実施中。" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="土俵際 × MUGEN | 放映記念キャンペーン" />
+<meta name="twitter:description" content="その一瞬に、すべてがかかる。——『土俵際』放映記念、MUGEN特別キャンペーン実施中。" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="preload" as="image" href="/images/bokashi.png" />
+<link rel="preload" as="image" href="/images/top.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css?v=18" />
+<style>
+  /* /mugen 専用の最小限コンポーネント（既存デザインに準拠） */
+  .cta-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid rgba(255, 240, 210, 0.35);
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #b8860b 0%, #c9971f 45%, #9c6b12 100%);
+    color: #fffaf0;
+    font-family: var(--font-noto-serif-jp), serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.14em;
+    padding: 0.95rem 2.4rem;
+    white-space: nowrap;
+    text-shadow: 0 1px 2px rgba(60, 38, 0, 0.45);
+    box-shadow: 0 6px 18px rgba(150, 100, 10, 0.35), inset 0 1px 0 rgba(255, 245, 220, 0.4), inset 0 -2px 4px rgba(90, 60, 0, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+  }
+  .cta-link:hover,
+  .cta-link:focus-visible {
+    background: linear-gradient(135deg, #c9971f 0%, #e0b23a 45%, #b8860b 100%);
+    border-color: rgba(255, 245, 220, 0.6);
+    box-shadow: 0 10px 26px rgba(170, 115, 15, 0.5), inset 0 1px 0 rgba(255, 250, 235, 0.55), inset 0 -2px 4px rgba(90, 60, 0, 0.3);
+    transform: translateY(-2px);
+  }
+  .cta-link .cta-arrow,
+  .cta-link > span {
+    transition: transform 0.3s ease;
+  }
+  .cta-link:hover .cta-arrow,
+  .cta-link:hover > span {
+    transform: translateX(4px);
+  }
+  .section-title {
+    font-family: var(--font-noto-serif-jp), serif;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+  /* ボタン上の見出し：本文の明朝体と差別化するゴシック体 */
+  .block-title {
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'YuGothic', 'Meiryo', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  /* キャンペーン内の各ブロックをパネル化して区切りを明確に */
+  .block-panel {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012));
+    border: 1px solid rgba(201, 169, 110, 0.16);
+    border-radius: 16px;
+    padding: 2.75rem 2.25rem;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  }
+  @media (max-width: 639px) {
+    .block-panel {
+      padding: 1.75rem 1.25rem;
+    }
+  }
+  .coming-soon-box {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: min(100%, 520px);
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    border: 1px dashed rgba(255, 255, 255, 0.18);
+    background: #050505;
+  }
+  .coming-soon-box span {
+    color: rgba(255, 255, 255, 0.45);
+    font-family: var(--font-cormorant), serif;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+  }
+  .dist-card {
+    border: 1px solid rgba(201, 169, 110, 0.18);
+    background: #050505;
+    padding: 2rem;
+  }
+  .badge-gold {
+    display: inline-block;
+    background: #c9a96e;
+    color: #111111;
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 0.74rem;
+    letter-spacing: 0.16em;
+    padding: 0.4rem 1.2rem;
+    border-radius: 9999px;
+  }
+  /* トップイメージ以外の画像に重ねる「仮の画像です」オーバーレイ */
+  .placeholder-note {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Noto Sans JP', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  .block-panel .gallery-thumb {
+    position: relative;
+  }
+  /* コラボアート用の額装プレースホルダー（実画像に差し替え可能） */
+  .art-frame {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: radial-gradient(circle at 50% 35%, #15110b 0%, #080808 70%);
+    border: 1px solid rgba(201, 169, 110, 0.35);
+  }
+  .art-frame::before {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border: 1px solid rgba(201, 169, 110, 0.18);
+    pointer-events: none;
+  }
+  .art-frame-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  .art-frame-mark {
+    font-family: var(--font-noto-serif-jp), serif;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: rgba(201, 169, 110, 0.75);
+  }
+  .art-frame-label {
+    font-family: var(--font-cormorant), serif;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.55);
+  }
+</style>
+</head>
+<body class="antialiased bg-black text-white">
+<main>
+  <!-- ===== Hero（トップページと同一の挙動：パララックス + ロゴ + スクロール誘導） ===== -->
+  <section id="hero" class="relative overflow-hidden" style="min-height:100dvh">
+    <div class="absolute inset-0 overflow-hidden" style="background-color:#b0171e">
+      <div id="hero-parallax" class="absolute inset-0 flex items-center justify-center">
+        <img alt="土俵際 ドキュメンタリー" decoding="async" class="hero-top-h" src="/images/topimage-h.png?v=20260916"/>
+        <img alt="土俵際 ドキュメンタリー" decoding="async" class="hero-top-v" src="/images/topimage-v.png?v=20260916"/>
+      </div>
+    </div>
+    <div id="hero-content" class="relative z-10 flex flex-col items-center justify-center text-center px-6" style="min-height:100dvh">
+      <img src="/images/logo.webp" alt="土俵際 — 高砂部屋ドキュメンタリー" class="hero-logo w-full max-w-md md:max-w-xl mb-12"/>
+    </div>
+    <div id="scroll-indicator" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer" style="opacity:0">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down text-[#c9a96e]" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 見どころ（Introductionパターンを踏襲） ===== -->
+  <span id="introduction"></span>
+  <section id="highlights" class="relative py-28 md:py-44 overflow-hidden bg-black">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-[0.04]" style="background:radial-gradient(circle, #c9a96e, transparent 70%)"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-[1fr_280px] gap-x-14 gap-y-10 items-center">
+        <div style="opacity:0;transform:translateY(40px)">
+          <p class="label-cinematic mb-4">Highlights</p>
+          <h2 class="section-title text-xl md:text-2xl mb-4">見どころ</h2>
+          <div class="gold-divider w-16 mb-10"></div>
+          <div class="space-y-8 text-gray-300 leading-loose" style="font-family:var(--font-noto-serif-jp), serif">
+            <p class="text-lg md:text-xl text-[#c9a96e]" style="font-family:var(--font-cormorant), serif;font-weight:300;letter-spacing:0.08em">その一瞬に、すべてがかかる。</p>
+            <p class="text-sm md:text-base leading-[2.2]">土俵の上で生きる、力士たちの知られざる日常と、<br/>勝負の裏側に迫るドキュメンタリー。</p>
+            <p class="text-sm md:text-base leading-[2.2]">勝ち負けだけではない、<br/>彼らの人生、想い、そして土俵際のドラマを<br/>ぜひご覧ください。</p>
+          </div>
+        </div>
+        <figure class="relative" style="opacity:0;transform:translateY(20px)">
+          <div class="relative overflow-hidden">
+            <img alt="" loading="lazy" decoding="async" class="w-full h-auto" style="color:transparent" src="/images/intro2.png?v=5"/>
+            <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(to bottom, rgba(5,5,5,0.55) 0%, transparent 30%, transparent 70%, rgba(5,5,5,0.55) 100%)"></div>
+            <span class="placeholder-note">仮の画像です</span>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 放送期間・配信サービス（Streamingパターンを踏襲） ===== -->
+  <section id="streaming" class="relative px-6 py-20 md:py-28" style="background-color:#16181f;border-top:1px solid rgba(201,169,110,0.1)">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="label-cinematic mb-4">Streaming</p>
+      <h2 class="section-title text-xl md:text-2xl mb-4">放送期間・配信サービス</h2>
+      <div class="gold-divider w-16 mx-auto mb-10"></div>
+      <p class="text-white text-base md:text-lg font-semibold leading-relaxed mb-2" style="font-family:var(--font-noto-serif-jp), serif">2026年11月1日より</p>
+      <p class="text-[#c9a96e] text-sm md:text-base tracking-[0.3em] mb-8" style="font-family:var(--font-noto-serif-jp), serif">Netflix・U-NEXTで独占配信</p>
+      <div class="grid grid-cols-2 gap-4 md:gap-6">
+        <div class="flex items-center justify-center bg-white rounded-md h-16 md:h-24 px-4">
+          <img src="/images/netflixlogo.png" alt="Netflix" class="max-h-6 md:max-h-9 w-auto object-contain"/>
+        </div>
+        <div class="flex items-center justify-center bg-white rounded-md h-16 md:h-24 px-4">
+          <img src="/images/u-nextlogo.png" alt="U-NEXT" class="max-h-6 md:max-h-9 w-auto object-contain"/>
+        </div>
+      </div>
+      <p class="text-gray-300 text-sm leading-[2.2] mt-8" style="font-family:var(--font-noto-serif-jp), serif">あの熱いドラマを、いつでもどこでも。</p>
+    </div>
+  </section>
+
+  <!-- ===== MUGENキャンペーン / 無料画像配布 / コラボアート / 物販 / 放映会巡業（Storyパターンを踏襲） ===== -->
+  <section id="story" class="relative py-24 md:py-40 overflow-hidden">
+    <div class="absolute inset-0 bg-[#050505]">
+      <div class="absolute inset-0 opacity-5" style="background-image:repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px)"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-bold select-none pointer-events-none opacity-[0.025] leading-none" style="font-family:var(--font-noto-serif-jp), serif">際</div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+      <div class="text-center mb-20" style="opacity:0;transform:translateY(40px)">
+        <p class="label-cinematic mb-4">Campaign</p>
+        <h2 class="section-title text-xl md:text-2xl mb-4">MUGENでキャンペーン実施中</h2>
+        <div class="gold-divider w-16 mx-auto mb-6"></div>
+        <p class="text-gray-300 text-sm md:text-base leading-[2.4] max-w-2xl mx-auto" style="font-family:var(--font-noto-serif-jp), serif">『土俵際』の放映を記念して、MUGENで特別キャンペーンを実施中です。<br/>ここでしか手に入らない特典もご用意しています。</p>
+      </div>
+
+      <div class="space-y-16">
+        <!-- 無料画像配布（全6種・週替わり）：中央揃え -->
+        <div class="block-panel text-center">
+          <div class="max-w-2xl mx-auto space-y-5" style="font-family:var(--font-noto-serif-jp), serif;opacity:0;transform:translateY(20px)">
+            <p class="block-title text-[#c9a96e] text-lg md:text-xl">放映記念の関連画像の無料配布はこちら</p>
+            <p class="text-gray-300 text-sm leading-[2.4]">『土俵際』の放映を記念して、寺見さんが手がけたオリジナル画像（全6種）を<br/>6週間、週替わりで無料配布します。</p>
+            <div class="pt-2">
+              <a class="cta-link" href="#" aria-label="無料画像をダウンロードする">無料画像をダウンロードする<span>→</span></a>
+            </div>
+            <p class="text-gray-dim text-xs leading-[2]" style="color:#6b7280">※ 画像はイメージです。実際の配布画像とは異なる場合があります。</p>
+          </div>
+          <div class="mt-12" style="opacity:0;transform:translateY(20px)">
+            <p class="mb-5"><span class="badge-gold">全6種（週替わり）</span></p>
+            <div class="gallery-grid">
+              <figure class="gallery-thumb"><img src="/images/gallery/photo1.webp" alt="配布画像1" loading="lazy" decoding="async"><span class="placeholder-note">仮の画像です</span></figure>
+              <figure class="gallery-thumb"><img src="/images/gallery/photo2.webp" alt="配布画像2" loading="lazy" decoding="async"><span class="placeholder-note">仮の画像です</span></figure>
+              <figure class="gallery-thumb"><img src="/images/gallery/photo3.webp" alt="配布画像3" loading="lazy" decoding="async"><span class="placeholder-note">仮の画像です</span></figure>
+              <figure class="gallery-thumb"><img src="/images/gallery/photo4.webp" alt="配布画像4" loading="lazy" decoding="async"><span class="placeholder-note">仮の画像です</span></figure>
+              <figure class="gallery-thumb"><img src="/images/gallery/photo5.webp" alt="配布画像5" loading="lazy" decoding="async"><span class="placeholder-note">仮の画像です</span></figure>
+              <figure class="gallery-thumb"><img src="/images/gallery/photo6.webp" alt="配布画像6" loading="lazy" decoding="async"><span class="placeholder-note">仮の画像です</span></figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- アーティストコラボ相撲アート -->
+        <div class="block-panel grid md:grid-cols-[1fr_280px] gap-x-14 gap-y-8 items-center">
+          <div class="space-y-5" style="font-family:var(--font-noto-serif-jp), serif;opacity:0;transform:translateY(20px)">
+            <p class="block-title text-[#c9a96e] text-lg md:text-xl">アーティストコラボの相撲アートを販売中</p>
+            <p class="text-gray-300 text-sm leading-[2.4]">人気アーティストが手がけた、<br/>ここでしか手に入らない相撲アート作品を販売します。<br/>さらに、抽選で限定グッズが当たる特典も！</p>
+            <div class="pt-2">
+              <a class="cta-link" href="#" aria-label="コラボアートを購入する">コラボアートを購入する<span>→</span></a>
+            </div>
+            <p class="text-gray-dim text-xs leading-[2]" style="color:#6b7280">※ 特典の内容は変更になる場合があります。</p>
+          </div>
+          <figure class="relative" style="opacity:0;transform:translateY(20px)">
+            <div class="art-frame">
+              <div class="art-frame-inner">
+                <span class="art-frame-mark">相撲</span>
+                <span class="art-frame-label">Collaboration Art</span>
+              </div>
+              <span class="placeholder-note" style="top:auto;bottom:16px;transform:translateX(-50%)">仮の画像です</span>
+            </div>
+          </figure>
+        </div>
+
+        <!-- 全国放映会巡業 -->
+        <div class="block-panel grid md:grid-cols-[1fr_280px] gap-x-14 gap-y-8 items-center">
+          <div class="space-y-5" style="font-family:var(--font-noto-serif-jp), serif;opacity:0;transform:translateY(20px)">
+            <p class="block-title text-[#c9a96e] text-lg md:text-xl">全国放映会巡業</p>
+            <p class="text-gray-300 text-sm leading-[2.4]">『土俵際』の特別放映会を、全国各地で開催します。<br/>ご希望の地域での開催をお申し込みいただけます。</p>
+            <p class="text-white text-base md:text-lg" style="font-family:var(--font-cormorant), serif;font-weight:300;letter-spacing:0.06em">一緒に観よう、土俵際を。</p>
+            <div class="pt-2">
+              <a class="cta-link" href="#" target="_blank" rel="noopener" aria-label="放映会を申込む（Googleフォームへ）">放映会を申込む（Googleフォームへ）<span>→</span></a>
+            </div>
+          </div>
+          <figure class="relative" style="opacity:0;transform:translateY(20px)">
+            <div class="relative overflow-hidden">
+              <img alt="" loading="lazy" decoding="async" class="w-full h-auto opacity-80" style="color:transparent" src="/images/story2.png?v=2"/>
+              <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(to bottom, rgba(5,5,5,0.8) 0%, transparent 25%, transparent 75%, rgba(5,5,5,0.8) 100%)"></div>
+              <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(to right, rgba(5,5,5,0.6) 0%, transparent 25%, transparent 75%, rgba(5,5,5,0.6) 100%)"></div>
+              <span class="placeholder-note">仮の画像です</span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer（トップページと同一） ===== -->
+  <footer class="bg-black border-t border-white/5 py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12">
+        <div>
+          <p class="text-white font-bold text-xl mb-1 tracking-widest" style="font-family:var(--font-noto-serif-jp), serif">土俵際</p>
+          <p class="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4" style="font-family:var(--font-cormorant), serif">Documentary Film · 2026</p>
+        </div>
+      </div>
+      <div class="gold-divider mb-6"></div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-white text-xs tracking-wide">© 2026 土俵際. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</main>
+<script src="/assets/main.js?v=9" defer></script>
+</body>
+</html>
