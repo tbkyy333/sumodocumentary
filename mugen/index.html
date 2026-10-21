@@ -4,8 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>土俵際 × MUGEN | 放映記念キャンペーン</title>
-<meta name="description" content="ドキュメンタリー『土俵際』放映記念。MUGENによる特別キャンペーン、無料画像配布、アーティストコラボ相撲アート、全国放映会巡業のご案内。2026年11月1日よりNetflix・U-NEXTで独占配信。" />
-<meta name="keywords" content="土俵際,MUGEN,キャンペーン,相撲アート,コラボ,高砂部屋,ドキュメンタリー,Netflix,U-NEXT" />
+<meta name="description" content="ドキュメンタリー『土俵際』放映記念。MUGENによる特別キャンペーン、無料画像配布、アーティストコラボ相撲アート。2026年11月11日よりNetflixで独占配信。" />
+<meta name="keywords" content="土俵際,MUGEN,キャンペーン,相撲アート,コラボ,高砂部屋,ドキュメンタリー,Netflix" />
 <meta property="og:title" content="土俵際 × MUGEN | 放映記念キャンペーン" />
 <meta property="og:description" content="その一瞬に、すべてがかかる。——『土俵際』放映記念、MUGEN特別キャンペーン実施中。" />
 <meta property="og:type" content="website" />
@@ -18,14 +18,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=18" />
+<link rel="stylesheet" href="/styles.css?v=28" />
 <style>
   /* /mugen 専用の最小限コンポーネント（既存デザインに準拠） */
   .cta-link {
     position: relative;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.75rem;
+    max-width: 100%;
+    box-sizing: border-box;
     border: 1px solid rgba(255, 240, 210, 0.35);
     border-radius: 9999px;
     background: linear-gradient(135deg, #b8860b 0%, #c9971f 45%, #9c6b12 100%);
@@ -40,6 +43,17 @@
     box-shadow: 0 6px 18px rgba(150, 100, 10, 0.35), inset 0 1px 0 rgba(255, 245, 220, 0.4), inset 0 -2px 4px rgba(90, 60, 0, 0.35);
     transition: transform 0.25s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
     cursor: pointer;
+  }
+  @media (max-width: 479px) {
+    .cta-link {
+      display: flex;
+      width: 100%;
+      white-space: normal;
+      text-align: center;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      padding: 0.85rem 1.25rem;
+    }
   }
   .cta-link:hover,
   .cta-link:focus-visible {
@@ -113,6 +127,59 @@
     letter-spacing: 0.16em;
     padding: 0.4rem 1.2rem;
     border-radius: 9999px;
+  }
+  /* 無料配布の週替わりスケジュール一覧 */
+  .schedule-badge {
+    display: inline-block;
+    border: 1px solid rgba(201, 169, 110, 0.55);
+    border-radius: 9999px;
+    color: #c9a96e;
+    font-family: var(--font-cormorant), serif;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    padding: 0.4rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    color: rgba(209, 213, 219, 1);
+    font-family: var(--font-noto-serif-jp), serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+  }
+  .schedule-list li {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 0.4rem;
+    width: 100%;
+    white-space: nowrap;
+  }
+  .schedule-num {
+    flex: none;
+    width: 3.2em;
+    color: #c9a96e;
+  }
+  @media (min-width: 640px) {
+    .schedule-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.6rem 1rem;
+      width: 100%;
+      font-size: 0.7rem;
+    }
+    .schedule-list li {
+      min-width: 0;
+      white-space: normal;
+    }
   }
   /* トップイメージ以外の画像に重ねる「仮の画像です」オーバーレイ */
   .placeholder-note {
@@ -249,8 +316,8 @@
   <section id="hero" class="relative overflow-hidden" style="min-height:100dvh">
     <div class="absolute inset-0 overflow-hidden" style="background-color:#b0171e">
       <div id="hero-parallax" class="absolute inset-0 flex items-center justify-center">
-        <img alt="土俵際 ドキュメンタリー" decoding="async" class="hero-top-h" src="/images/topimage-h.png?v=20260916"/>
-        <img alt="土俵際 ドキュメンタリー" decoding="async" class="hero-top-v" src="/images/topimage-v.png?v=20260916"/>
+        <img alt="土俵際 ドキュメンタリー" decoding="async" class="hero-top-h" src="/images/topimage-h.png?v=20261019"/>
+        <img alt="土俵際 ドキュメンタリー" decoding="async" class="hero-top-v" src="/images/topimage-v.png?v=20261019"/>
       </div>
     </div>
     <div id="hero-content" class="relative z-10 flex flex-col items-center justify-center text-center px-6" style="min-height:100dvh">
@@ -270,7 +337,7 @@
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-[0.04]" style="background:radial-gradient(circle, #c9a96e, transparent 70%)"></div>
     </div>
     <div class="relative z-10 max-w-5xl mx-auto px-6">
-      <div class="grid md:grid-cols-[1fr_280px] gap-x-14 gap-y-10 items-center">
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_280px] gap-x-14 gap-y-10 items-center">
         <div style="opacity:0;transform:translateY(40px)">
           <p class="label-cinematic mb-4">Highlights</p>
           <h2 class="section-title text-xl md:text-2xl mb-4">見どころ</h2>
@@ -285,7 +352,6 @@
           <div class="relative overflow-hidden">
             <img alt="" loading="lazy" decoding="async" class="w-full h-auto" style="color:transparent" src="/images/intro2.png?v=5"/>
             <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(to bottom, rgba(5,5,5,0.55) 0%, transparent 30%, transparent 70%, rgba(5,5,5,0.55) 100%)"></div>
-            <span class="placeholder-note">仮の画像です</span>
           </div>
         </figure>
       </div>
@@ -298,21 +364,16 @@
       <p class="label-cinematic mb-4">Streaming</p>
       <h2 class="section-title text-xl md:text-2xl mb-4">放送期間・配信サービス</h2>
       <div class="gold-divider w-16 mx-auto mb-10"></div>
-      <p class="text-white text-base md:text-lg font-semibold leading-relaxed mb-2" style="font-family:var(--font-noto-serif-jp), serif">2026年11月1日より</p>
-      <p class="text-[#c9a96e] text-sm md:text-base tracking-[0.3em] mb-8" style="font-family:var(--font-noto-serif-jp), serif">Netflix・U-NEXTで独占配信</p>
-      <div class="grid grid-cols-2 gap-4 md:gap-6">
-        <div class="flex items-center justify-center bg-white rounded-md h-16 md:h-24 px-4">
-          <img src="/images/netflixlogo.png" alt="Netflix" class="max-h-6 md:max-h-9 w-auto object-contain"/>
-        </div>
-        <div class="flex items-center justify-center bg-white rounded-md h-16 md:h-24 px-4">
-          <img src="/images/u-nextlogo.png" alt="U-NEXT" class="max-h-6 md:max-h-9 w-auto object-contain"/>
+      <p class="text-[#c9a96e] text-sm md:text-base tracking-[0.3em] mb-8" style="font-family:var(--font-noto-serif-jp), serif">Netflix 2026.11.1から配信</p>
+      <div class="flex justify-center">
+        <div class="flex items-center justify-center bg-white rounded-md h-12 md:h-14 px-8 md:px-10">
+          <img src="/images/netflixlogo.png" alt="Netflix" class="max-h-5 md:max-h-6 w-auto object-contain"/>
         </div>
       </div>
-      <p class="text-gray-300 text-sm leading-[2.2] mt-8" style="font-family:var(--font-noto-serif-jp), serif">あの熱いドラマを、いつでもどこでも。</p>
     </div>
   </section>
 
-  <!-- ===== MUGENキャンペーン / 無料画像配布 / コラボアート / 物販 / 放映会巡業（Storyパターンを踏襲） ===== -->
+  <!-- ===== MUGENキャンペーン / 無料画像配布 / コラボアート / 物販（Storyパターンを踏襲） ===== -->
   <section id="story" class="relative py-24 md:py-40 overflow-hidden">
     <div class="absolute inset-0 bg-[#050505]">
       <div class="absolute inset-0 opacity-5" style="background-image:repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px)"></div>
@@ -321,72 +382,65 @@
     <div class="relative z-10 max-w-5xl mx-auto px-6">
       <div class="text-center mb-20" style="opacity:0;transform:translateY(40px)">
         <p class="label-cinematic mb-4">Campaign</p>
-        <h2 class="section-title text-xl md:text-2xl mb-4">MUGENでキャンペーン実施中</h2>
+        <h2 class="section-title text-xl md:text-2xl mb-4">MUGEN Portalでキャンペーン開催中</h2>
         <div class="gold-divider w-16 mx-auto mb-6"></div>
-        <p class="text-gray-300 text-sm md:text-base leading-[2.4] max-w-2xl mx-auto" style="font-family:var(--font-noto-serif-jp), serif">『土俵際』の放映を記念して、MUGENで特別キャンペーンを実施中です。<br/>ここでしか手に入らない特典もご用意しています。</p>
+        <p class="text-gray-300 text-sm md:text-base leading-[2.4] max-w-2xl mx-auto" style="font-family:var(--font-noto-serif-jp), serif">「土俵際」の放映を記念して、MUGEN Portalでキャンペーンを開催中です。<br/>ここでしか手に入らない特典もご用意しています。</p>
       </div>
 
       <div class="space-y-16">
         <!-- 無料画像配布（全6種・週替わり）：中央揃え -->
         <div class="block-panel text-center">
           <div class="max-w-2xl mx-auto space-y-5" style="font-family:var(--font-noto-serif-jp), serif;opacity:0;transform:translateY(20px)">
-            <p class="block-title text-[#c9a96e] text-lg md:text-xl">放映記念の関連画像の無料配布はこちら</p>
-            <p class="text-gray-300 text-sm leading-[2.4]">『土俵際』の放映を記念して、寺見さんが手がけたオリジナル画像（全6種）を<br/>6週間、週替わりで無料配布します。</p>
+            <p class="block-title text-[#c9a96e] text-lg md:text-xl">放映を記念してデジタルコレクションを無料配布</p>
+            <p class="text-gray-300 text-sm leading-[2.4]">寺見さんが手がけた作中シーンを使用した壁紙付きデジタルコレクションを、<br/>6週連続で週替わりに無料配布します。</p>
             <div class="pt-2">
-              <a class="cta-link" href="#" aria-label="無料画像をダウンロードする">無料画像をダウンロードする<span>→</span></a>
+              <a class="cta-link" href="#" aria-label="デジタルコレクション（無料）を受け取る">デジタルコレクション（無料）を受け取る<span>→</span></a>
             </div>
-            <p class="text-gray-dim text-xs leading-[2]" style="color:#6b7280">※ 画像はイメージです。実際の配布画像とは異なる場合があります。</p>
+            <div class="pt-1">
+              <p class="schedule-badge">配布スケジュール</p>
+              <ul class="schedule-list">
+                <li><span class="schedule-num">第1弾</span><span>11月2日(月) 〜 11月8日(日)</span></li>
+                <li><span class="schedule-num">第2弾</span><span>11月9日(月) 〜 11月15日(日)</span></li>
+                <li><span class="schedule-num">第3弾</span><span>11月16日(月) 〜 11月22日(日)</span></li>
+                <li><span class="schedule-num">第4弾</span><span>11月23日(月) 〜 11月29日(日)</span></li>
+                <li><span class="schedule-num">第5弾</span><span>11月30日(月) 〜 12月6日(日)</span></li>
+                <li><span class="schedule-num">第6弾</span><span>12月7日(月) 〜 12月13日(日)</span></li>
+              </ul>
+            </div>
           </div>
           <div class="mt-12" style="opacity:0;transform:translateY(20px)">
-            <p class="mb-5"><span class="badge-gold">全6種（週替わり）</span></p>
-            <div class="gallery-grid">
-              <figure class="gallery-thumb"><img src="/images/gallery/photo1.webp" alt="配布画像1" loading="lazy" decoding="async"><span class="placeholder-note">仮の画像です</span></figure>
-              <figure class="gallery-thumb"><img src="/images/gallery/photo2.webp" alt="配布画像2" loading="lazy" decoding="async"><span class="placeholder-note">仮の画像です</span></figure>
-              <figure class="gallery-thumb"><img src="/images/gallery/photo3.webp" alt="配布画像3" loading="lazy" decoding="async"><span class="placeholder-note">仮の画像です</span></figure>
-              <figure class="gallery-thumb"><img src="/images/gallery/photo4.webp" alt="配布画像4" loading="lazy" decoding="async"><span class="placeholder-note">仮の画像です</span></figure>
-              <figure class="gallery-thumb"><img src="/images/gallery/photo5.webp" alt="配布画像5" loading="lazy" decoding="async"><span class="placeholder-note">仮の画像です</span></figure>
-              <figure class="gallery-thumb"><img src="/images/gallery/photo6.webp" alt="配布画像6" loading="lazy" decoding="async"><span class="placeholder-note">仮の画像です</span></figure>
+            <div class="relative overflow-hidden" style="width:min(100%, 680px);margin:0 auto">
+              <img src="/images/digital-image.png" alt="配布デジタルコレクション" class="w-full h-auto" loading="lazy" decoding="async"/>
+            </div>
+            <div class="mt-6 space-y-2">
+              <p><span class="badge-gold">全6種（週替わり）</span></p>
+              <p class="text-gray-dim text-xs leading-[2]" style="color:#6b7280">※画像はイメージです。実際の画像とは異なる場合があります。</p>
             </div>
           </div>
         </div>
 
         <!-- アーティストコラボ相撲アート -->
-        <div class="block-panel grid md:grid-cols-[1fr_280px] gap-x-14 gap-y-8 items-center">
+        <div class="block-panel grid grid-cols-1 md:grid-cols-[1fr_280px] gap-x-14 gap-y-8 items-center">
           <div class="space-y-5" style="font-family:var(--font-noto-serif-jp), serif;opacity:0;transform:translateY(20px)">
-            <p class="block-title text-[#c9a96e] text-lg md:text-xl">アーティストコラボの相撲アートを販売中</p>
-            <p class="text-gray-300 text-sm leading-[2.4]">人気アーティストが手がけた、<br/>ここでしか手に入らない相撲アート作品を販売します。<br/>さらに、抽選で限定グッズが当たる特典も！</p>
+            <p class="block-title text-[#c9a96e] text-lg md:text-xl">アーティストコラボの相撲アートコレクションを販売中</p>
+            <p class="text-gray-300 text-sm leading-[2.4]">人気アーティストが手がけた、<br/>ここでしか手に入らない壁紙付きデジタルコレクションを販売します。</p>
             <div class="pt-2">
-              <a class="cta-link" href="#" aria-label="コラボアートを購入する">コラボアートを購入する<span>→</span></a>
+              <a class="cta-link" href="#" aria-label="相撲アートコレクションを購入する">相撲アートコレクションを購入する<span>→</span></a>
             </div>
             <p class="text-gray-dim text-xs leading-[2]" style="color:#6b7280">※ 特典の内容は変更になる場合があります。</p>
           </div>
           <figure class="relative" style="opacity:0;transform:translateY(20px)">
-            <div class="art-frame">
-              <div class="art-frame-inner">
-                <span class="art-frame-mark">相撲</span>
-                <span class="art-frame-label">Collaboration Art</span>
-              </div>
-              <span class="placeholder-note" style="top:auto;bottom:16px;transform:translateX(-50%)">仮の画像です</span>
+            <div class="relative overflow-hidden" style="border:1px solid rgba(201,169,110,0.35)">
+              <img src="/images/art.png" alt="アーティストコラボ相撲アート" class="w-full h-auto" loading="lazy" decoding="async"/>
             </div>
           </figure>
-        </div>
-
-        <!-- 全国放映会巡業 -->
-        <div class="block-panel grid md:grid-cols-[1fr_280px] gap-x-14 gap-y-8 items-center">
           <div class="space-y-5" style="font-family:var(--font-noto-serif-jp), serif;opacity:0;transform:translateY(20px)">
-            <p class="block-title text-[#c9a96e] text-lg md:text-xl">全国放映会巡業</p>
-            <p class="text-gray-300 text-sm leading-[2.4]">『土俵際』の特別放映会を、全国各地で開催します。<br/>ご希望の地域での開催をお申し込みいただけます。</p>
-            <p class="text-white text-base md:text-lg" style="font-family:var(--font-cormorant), serif;font-weight:300;letter-spacing:0.06em">一緒に観よう、土俵際を。</p>
-            <div class="pt-2">
-              <a class="cta-link" href="#" target="_blank" rel="noopener" aria-label="放映会を申込む（Googleフォームへ）">放映会を申込む（Googleフォームへ）<span>→</span></a>
-            </div>
+            <p class="block-title text-[#c9a96e] text-lg md:text-xl">抽選で限定グッズが当たるキャンペーン開催中！</p>
+            <p class="text-gray-300 text-sm leading-[2.4]">相撲アートコレクションを1回以上ご購入いただいた方の中から抽選で10名様に「土俵の砂（瓶詰め）」をプレゼントします。<br/>1回のご購入につき1口が応募口数として追加され、ご購入回数に応じて応募口数が増えます。キャンペーンの詳細は、ページ下部の「キャンペーン詳細はこちら」をご確認ください。</p>
           </div>
           <figure class="relative" style="opacity:0;transform:translateY(20px)">
-            <div class="relative overflow-hidden">
-              <img alt="" loading="lazy" decoding="async" class="w-full h-auto opacity-80" style="color:transparent" src="/images/story2.png?v=2"/>
-              <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(to bottom, rgba(5,5,5,0.8) 0%, transparent 25%, transparent 75%, rgba(5,5,5,0.8) 100%)"></div>
-              <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(to right, rgba(5,5,5,0.6) 0%, transparent 25%, transparent 75%, rgba(5,5,5,0.6) 100%)"></div>
-              <span class="placeholder-note">仮の画像です</span>
+            <div class="relative overflow-hidden" style="border:1px solid rgba(201,169,110,0.35)">
+              <img src="/images/suna.webp" alt="土俵の砂（瓶詰め）" class="w-full h-auto" loading="lazy" decoding="async"/>
             </div>
           </figure>
         </div>
@@ -399,13 +453,13 @@
     <div class="max-w-3xl mx-auto text-center">
       <details class="campaign-details">
         <summary>
-          <span>キャンペーン情報・ご注意はこちら</span>
+          <span>キャンペーン詳細</span>
           <svg class="chev" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
         </summary>
         <div class="campaign-body">
           <h3>■ キャンペーン概要</h3>
-          <p>キャンペーン期間中、MUGEN Portalで相撲アートコレクションを1回以上購入いただいた方の中から抽選で10名様に、「相撲部屋の砂（瓶詰め）」をプレゼントします。</p>
-          <p>相撲アートコレクション1回の購入につき1口として自動的に抽選対象となり、購入回数に応じて抽選口数が増えます。</p>
+          <p>相撲アートコレクションを1回以上ご購入いただいた方の中から抽選で10名様に「土俵の砂（瓶詰め）」をプレゼントします。</p>
+          <p>1回のご購入につき1口が応募口数として追加され、ご購入回数に応じて応募口数が増えます。</p>
 
           <h3>■ キャンペーン期間</h3>
           <p>2026年11月2日(月) ～ 2027年12月13日(日)</p>
@@ -413,14 +467,14 @@
           <h3>■ 特典内容</h3>
           <p>キャンペーン期間中に相撲アートコレクションを1回以上購入した方の中から、抽選で以下の特典をプレゼントします。</p>
           <ul>
-            <li>相撲部屋の砂（瓶詰め）　10名様</li>
+            <li>土俵の砂（瓶詰め）　10名様</li>
           </ul>
 
           <h3>■ 応募条件</h3>
-          <p>キャンペーン期間中に、相撲アートコレクションをご購入いただくことで、自動的に抽選対象となります。</p>
+          <p>キャンペーン期間中に、相撲アートコレクションをご購入いただくことで、自動的にご応募となります。</p>
           <ul>
             <li>相撲アートコレクション1回の購入につき1口</li>
-            <li>購入回数に応じて抽選口数が増加</li>
+            <li>購入回数に応じて応募口数が増加</li>
             <li>別途エントリーは不要</li>
             <li>当選はお一人様1回まで</li>
             <li>特典の発送は日本国内限定</li>
@@ -430,7 +484,7 @@
           <p>当選結果のお知らせは、特典の発送をもってかえさせていただきます。</p>
 
           <h3>■ 発送先／発送元</h3>
-          <p>特典は（株）ロイヤリティマーケティングより、Ponta会員情報に登録されているご住所宛に発送いたします。ご住所の登録がない場合や、登録済の住所に変更がある場合は、キャンペーン終了日までにPonta会員情報変更より住所の変更手続きをお願いいたします。</p>
+          <p>特典は（株）ロイヤリティマーケティングより、Ponta会員情報に登録されているご住所宛に発送いたします。ご住所の登録がない場合や、登録済の住所に変更がある場合は、キャンペーン終了日までに<a href="https://www.ponta.jp/c/mem/" target="_blank" rel="noopener noreferrer" style="color:#c9a96e;text-decoration:underline">Ponta会員情報変更</a>より住所の変更手続きをお願いいたします。</p>
 
           <h3>■ 特典発送時期</h3>
           <p>2027年2月末頃</p>
@@ -442,6 +496,7 @@
           <h3>■ 注意事項</h3>
           <ul>
             <li>本キャンペーンへの参加はお一人様1回限り有効です。</li>
+            <li>相撲アートコレクションのご購入にはPontaWeb会員登録またはau ID連携が必要です。すでにお済みの方は、新たに連携の必要はありません。まだお済みでない方は、<a href="https://www.ponta.jp/c/idconnect/" target="_blank" rel="noopener noreferrer" style="color:#c9a96e;text-decoration:underline">こちら</a>からご連携いただけます。</li>
             <li>本キャンペーンへの参加の取り消しはできません。</li>
             <li>本キャンペーンへの参加状況および抽選／当落についてのお問い合わせには対応いたしかねます。</li>
             <li>住所不明、長期不在等により特典をお届けできない場合、当選を無効とする場合があります。</li>
@@ -449,8 +504,7 @@
               <ul>
                 <li>（1）Pontaを退会した場合</li>
                 <li>（2）Ponta会員IDの登録内容に虚偽・不備がある場合</li>
-                <li>（3）Pontaアプリに複数のPonta会員IDを用いてログインをした場合</li>
-                <li>（4）お会計をキャンセル・返品された場合など、ポイント獲得条件を満たさない場合</li>
+                <li>（3）お会計をキャンセル・返品された場合など、応募条件を満たさない場合</li>
               </ul>
             </li>
             <li>《PontaWebでPonta会員登録される場合》
@@ -496,6 +550,6 @@
     </div>
   </footer>
 </main>
-<script src="/assets/main.js?v=9" defer></script>
+<script src="/assets/main.js?v=11" defer></script>
 </body>
 </html>

@@ -74,15 +74,6 @@ body {
   color: #c9a96e;
 }
 
-/* Scroll indicator chevron bounce */
-@keyframes chev-bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
-}
-#scroll-indicator svg {
-  animation: chev-bounce 1.8s ease-in-out infinite;
-}
-
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -98,25 +89,28 @@ body {
   container-type: size;
   container-name: hero;
 }
+@media (min-aspect-ratio: 1/1) {
+  #hero {
+    /* Wide/short viewports: grow past 100dvh so the width-capped artwork and its caption are never clipped */
+    height: max(100dvh, calc(min(100vw, 1280px) * 0.5359 + 6rem));
+  }
+}
 #hero::after {
   content: '';
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
-  height: 28%;
+  height: 14%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.48) 54%, #000 100%);
   pointer-events: none;
   z-index: 5;
-}
-#scroll-indicator {
-  z-index: 10;
 }
 #hero-content {
   display: none;
 }
 
-/* Upcoming movie placeholder */
+/* Movie trailer embed + selector tabs */
 #movie {
   position: relative;
   background: #000;
@@ -137,6 +131,56 @@ body {
   inset: 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   pointer-events: none;
+  z-index: 2;
+}
+.movie-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  z-index: 1;
+}
+.movie-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.5rem;
+  margin: 1.75rem auto 0;
+  width: min(100%, 960px);
+}
+.movie-tab {
+  position: relative;
+  padding: 0.4rem 0.1rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: var(--font-noto-serif-jp), serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+.movie-tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #c9a96e;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.movie-tab:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+.movie-tab.is-active {
+  color: #c9a96e;
+}
+.movie-tab.is-active::after {
+  transform: scaleX(1);
 }
 .movie-placeholder {
   position: relative;
@@ -288,6 +332,7 @@ body {
     width: 100%;
     max-width: 1280px;
     height: auto;
+    padding-bottom: 6rem;
   }
 }
 @container hero (aspect-ratio < 1) {

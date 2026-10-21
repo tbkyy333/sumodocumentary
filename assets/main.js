@@ -61,7 +61,6 @@
 
   // --- Sticky header background on scroll ---
   var header = document.getElementById('site-header');
-  var heroParallax = document.getElementById('hero-parallax');
   var heroContent = document.getElementById('hero-content');
 
   function onScroll() {
@@ -78,10 +77,6 @@
     }
 
     if (!reduceMotion) {
-      if (heroParallax) {
-        var off = Math.min(y * 0.15, 140);
-        heroParallax.style.transform = 'translateY(' + off + 'px)';
-      }
       if (heroContent) {
         heroContent.style.opacity = String(Math.max(0, 1 - y / 400));
       }
@@ -103,15 +98,6 @@
     { passive: true }
   );
   onScroll();
-
-  // --- Scroll indicator ---
-  var scrollIndicator = document.getElementById('scroll-indicator');
-  if (scrollIndicator) {
-    scrollIndicator.addEventListener('click', function () {
-      var next = document.querySelector('#introduction');
-      if (next) next.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
 
   // --- Mobile menu ---
   var menuToggle = document.getElementById('menu-toggle');
@@ -245,6 +231,25 @@
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+    });
+  }
+
+  // --- Movie trailer switcher ---
+  var moviePlayer = document.getElementById('movie-player');
+  var movieTabs = document.querySelectorAll('.movie-tab');
+  if (moviePlayer && movieTabs.length) {
+    movieTabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        if (tab.classList.contains('is-active')) return;
+        movieTabs.forEach(function (t) {
+          t.classList.remove('is-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected', 'true');
+        moviePlayer.src = 'https://www.youtube.com/embed/' + tab.dataset.videoId;
+        moviePlayer.title = tab.dataset.videoTitle || tab.textContent.trim();
+      });
     });
   }
 })();
